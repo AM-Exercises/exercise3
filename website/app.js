@@ -36,7 +36,7 @@ function performAction(e){
 const getWeather = async ()=>{
 
     console.log(zipInput.value);
-    const res = await fetch(`http://${baseURL}zip=${zipInput.value},us${apiKey}`);
+    const res = await fetch(`http://${baseURL}zip=${zipInput.value},us${apiKey}&units=imperial`);
     try {
   
       const data = await res.json();
